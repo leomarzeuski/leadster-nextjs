@@ -1,43 +1,45 @@
 import * as S from "./styles";
 import FilterArea from "../filterArea";
-const videos = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
+import Pagination from "../pagination";
+
+
+const videos: {url:string; description: string}[] = [
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
+{url: "https://www.youtube.com", description: "Como aumentar sua geração de Leads feat. Traktor"},
 ];
-const OurVideos = () => {
+
+const OurVideos: React.FC = () => {
+
+
   return (
-    <>
       <S.Container>
         <FilterArea />
-        <S.Box>
-          {videos.map((item, index) => (
-            <p key={index}>{item}</p>
-          ))}
-        </S.Box>
+        <Pagination videosPerPage={9} data={videos} />
       </S.Container>
-    </>
   );
 };
 

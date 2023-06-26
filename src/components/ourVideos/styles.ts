@@ -8,11 +8,4 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const Box = styled.div`
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 60px 80px;
-`;
+
