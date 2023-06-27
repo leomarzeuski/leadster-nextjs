@@ -16,6 +16,9 @@ export const Button = styled.button<PropsButton>`
   background-color: transparent;
   border: 2px solid gray;
   font-weight: 600;
+  @media (max-width: 768px) {
+    display: none;
+  }
   :hover {
     border: 2px solid #2c83fb;
     color: #2c83fb;

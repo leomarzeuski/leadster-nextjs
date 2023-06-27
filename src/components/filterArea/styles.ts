@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const FilterContainer = styled.div`
-  width: 60%;
+  gap: 10px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  padding: 60px 80px;
 `;

@@ -55,12 +55,25 @@ export const ButtonContainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  gap: 10px;
 `;
 
 export const Button = styled.button`
-  background-color: #2c3e50;
-  font-weight: 600;
-  type: button;
+  padding: 20px 30px;
+  border-radius: 26px;
+  border: 2px solid #1f76f0;
+  background: #1f76f0;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: transparent;
+    color: #1f76f0;
+  }
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+  }
 `;
 
 export const Text = styled.p`
