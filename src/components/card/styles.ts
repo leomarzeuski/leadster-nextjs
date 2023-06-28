@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsFillPlayFill } from "react-icons/bs";
 
-export const Container = styled(Link)`
+export const Container = styled.div`
   width: 100%;
   min-width: 300px;
   height: auto;
@@ -31,7 +31,7 @@ export const ThumbnailWrapper = styled.div`
 `;
 
 export const Icon = styled(BsFillPlayFill)`
- position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
