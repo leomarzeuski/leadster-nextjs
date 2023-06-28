@@ -3,7 +3,16 @@ import * as S from "./styles";
 import { useState } from "react";
 
 interface PaginationProps {
-  data: any[];
+  data: {
+    url: string;
+    description: string;
+    modal: {
+      title: string;
+      url: string;
+      description: string;
+      downloadUrl: string;
+    };
+  }[];
   videosPerPage: number;
 }
 
@@ -15,7 +24,14 @@ const Pagination: React.FC<PaginationProps> = ({ data, videosPerPage }) => {
   const displayVideos = data
     .slice(pagesVisited, pagesVisited + videosPerPage)
     .map((item, index) => {
-      return <Card key={index} url={item.url} description={item.description} />;
+      return (
+        <Card
+          key={index}
+          url={item.url}
+          description={item.description}
+          modal={item.modal}
+        />
+      );
     });
 
   const pageCount = Math.ceil(data.length / videosPerPage);
